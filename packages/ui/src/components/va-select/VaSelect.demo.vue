@@ -180,6 +180,7 @@
         v-model="objectMultiSelect.value"
         class="mb-4"
         label="Searchable multiselect text-by value"
+        search-placeholder="Search Placeholder"
         :options="objectMultiSelect.options"
         text-by="value"
         multiple
