@@ -83,7 +83,6 @@ export default defineComponent({
     getGroupBy: { type: Function as PropType<(option: SelectableOption) => string>, required: true },
     multiple: { type: Boolean, default: false },
     search: { type: String, default: '' },
-    searchPlaceholder: { type: String, default: 'Search' },
     tabindex: { type: Number, default: 0 },
     hoveredOption: {
       type: [String, Number, Object] as PropType<SelectableOption | null>,
