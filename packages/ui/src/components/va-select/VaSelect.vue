@@ -130,6 +130,7 @@
           :get-group-by="getGroupBy"
           :search="searchInput"
           :no-options-text="$props.noOptionsText"
+          :search-placeholder="$props.searchPlaceholder"
           :color="$props.color"
           :tabindex="tabIndexComputed"
           @select-option="selectOption"
