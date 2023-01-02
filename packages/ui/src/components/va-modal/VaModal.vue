@@ -182,6 +182,7 @@ export default defineComponent({
     maxWidth: { type: String, default: '' },
     maxHeight: { type: String, default: '' },
     anchorClass: { type: String },
+    isModalOverlayOnTop: { type: Boolean },
     size: {
       type: String as PropType<'medium' | 'small' | 'large'>,
       default: 'medium',
@@ -230,8 +231,9 @@ export default defineComponent({
       // NOTE Not sure exactly what that does.
       // Supposedly solves some case when background wasn't shown.
       // As a side effect removes background from nested modals.
+      const isOverlayVisible = props.isModalOverlayOnTop ? !isTopLevelModal.value : !isLowestLevelModal.value
 
-      if (!props.overlay || !isLowestLevelModal.value) { return }
+      if (!props.overlay || isOverlayVisible) { return }
 
       return {
         'background-color': `rgba(0, 0, 0, ${props.overlayOpacity})`,

@@ -314,12 +314,12 @@
         Show first modal
       </button>
 
-      <va-modal v-model="showModalNested1" :message="message" hide-default-actions>
+      <va-modal v-model="showModalNested1" :message="message" hide-default-actions isModalOverlayOnTop>
         <button class="mt-5" @click="showModalNested2 = !showModalNested2" color="secondary">
           Show second modal
         </button>
 
-        <va-modal v-model="showModalNested2" :message="message">
+        <va-modal v-model="showModalNested2" :message="message" isModalOverlayOnTop>
           Second Modal
         </va-modal>
       </va-modal>
